@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="back"></div>
+      <div id="div1" class="formulario fontstyle">
+        <form id="formReset" action="">
+          <label for="name">CARDHOLDER NAME</label><br />
+          <input
+            id="holderName"
+            class="input_name fontstyle"
+            type="text"
+            placeholder="    e.g. Jane Appleseed"
+          />
+          <span id="errorName"></span>
+          <br />
+          <label for="cardnumber">CARD NUMBER</label><br />
+          <input
+            id="cardNumber"
+            class="input_number fontstyle"
+            type="text"
+            placeholder="    e.g. 1234 5678 9123 0000"
+          />
+          <span id="errorNumber"></span>
+          <br />
+          <label for="expdate">EXP. DATE (MM/YY)</label
+          ><span class="codemargin">CVC</span><br />
+          <input
+            id="month"
+            class="month fontstyle"
+            type="text"
+            placeholder="    MM"
+          />
+          <span id="errorMonth"></span>
+          <input
+            id="year"
+            class="year fontstyle"
+            type="text"
+            placeholder="    YY"
+          />
+          <span id="errorYear"></span>
+          <input
+            id="cvcode"
+            class="cvc fontstyle"
+            type="text"
+            placeholder="    e.g. 123"
+          />
+          <span id="errorCvc"></span>
+          <br />
+          <button id="buttonConfirm" class="button1" onclick="toggleDivs()" type="button">
+            Confirm
+          </button>
+        </form>
+      </div>
+      <div id="div2" class="goodbye input_name fontstyle hide">
+        <div class="thanks"></div>
+        <img src="imagenes/icon-complete.svg" alt="" />
+        <p>THANK YOU!</p>
+        <p>We've added your card details</p>
+        <button id="buttonContinue" class="button1">Continue</button>
+      </div>
+    </div>
+    <div class="frontcard">
+      <div class="cardpic1 whitetype">
+        <div class="iconcard"></div>
+        <span id="frontName" class="data1 fontstylecard">JANE APPLESEED</span>
+        <span id="frontNumber" class="data2 numberstylecard"
+          >0000 0000 0000 0000</span
+        >
+        <span id="frontMonth" class="data3 fontstylecard">00</span>
+        <span id="frontSlash" class="data4 fontstylecard">/</span>
+        <span id="frontYear" class="data5 fontstylecard">00</span>
+      </div>
+    </div>
+
+    <div class="backcard">
+      <div class="cardpic2 whitetype">
+        <span id="cvcNumber" class="data6 fontstylecard">000</span>
+      </div>
+    </div>
+    <script src="main2.js"></script>
+  </body>
+</html>
